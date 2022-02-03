@@ -12,3 +12,9 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import { initSelect } from "../plugins/select_tags"
+
+document.addEventListener("turbolinks:load", () => {
+  initSelect();
+})

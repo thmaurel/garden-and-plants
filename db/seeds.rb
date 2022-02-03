@@ -6,5 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Garden.create(name: "My Little Garden", photo_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/garden_1.jpg")
-Garden.create(name: "My Pretty Garden", photo_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/garden_2.jpg")
+# Garden.create(name: "My Little Garden", photo_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/garden_1.jpg")
+# Garden.create(name: "My Pretty Garden", photo_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/garden_2.jpg")
+
+names = %w(Fruit\ tree Cactus Greasy\ plant Flower Ferns Conifers)
+
+names.each do |name|
+  Tag.create!(name: name)
+end

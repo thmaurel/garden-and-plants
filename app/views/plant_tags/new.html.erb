@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Add some tags to <%= @plant.name %></h1>
+  <%= simple_form_for [@plant, @plant_tag] do |f| %>
+    <%= f.input :tag_id, collection: Tag.all, input_html: { multiple: true, class: "multi-select"} %>
+    <%= f.submit %>
+  <% end %>
+</div>
